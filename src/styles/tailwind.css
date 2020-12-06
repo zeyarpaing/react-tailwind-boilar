@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.button {
+  @apply bg-white text-gray-900 px-3 py-2 text-base rounded-md;
+}
+
+.button:hover {
+  @apply bg-gray-500;
+}

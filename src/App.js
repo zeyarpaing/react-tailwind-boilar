@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "./styles/main.css";
 import { useState } from "react";
 import Image from "./components/Image";
 const arr = ["Hellow", "World", "Blah"];
@@ -13,6 +14,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
           <p>{count}</p>
           <button
+            className="button"
             onClick={(e) => {
               console.log(e);
               setCount(count + 1);
