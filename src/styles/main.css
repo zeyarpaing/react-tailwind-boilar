@@ -29144,7 +29144,7 @@ video {
 
 .button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {

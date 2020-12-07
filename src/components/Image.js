@@ -1,15 +1,20 @@
-const Image = (props) => {
+const Image = ({ dataobj }) => {
   //some code here
   return (
-    <div>
-      <img
-        className="rounded-t"
-        src="https://images.unsplash.com/photo-1603329468797-17034759a9ed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
-        alt="Tree"
-      />
+    <div className="bg-white shadow-xl m-8 border border-gray-300 rounded-lg">
       <div>
-        <h2>{props.title}</h2>
-        <p>Description</p>
+        <img
+          className="rounded-t-lg"
+          style={{ maxHeight: 250 }}
+          src={dataobj.imgUrl}
+          alt="Tree"
+        />
+      </div>
+
+      <div className="p-4">
+        <h2 className="font-bold text-3xl">{dataobj.title}</h2>
+        <p>{dataobj.description}</p>
+        <p className="italic">Author: {dataobj.author}</p>
       </div>
     </div>
   );
