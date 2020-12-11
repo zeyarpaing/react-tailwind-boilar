@@ -2,6 +2,7 @@ import Image from "../components/Image";
 import Loading from "../components/Loading";
 import { useState, useEffect } from "react";
 import { API } from "../components/api-instance";
+import Button from "../components/Button";
 
 const Gallary = () => {
   const [getImageData, setImageData] = useState([]);
@@ -28,7 +29,11 @@ const Gallary = () => {
           <Image dataobj={obj} key={obj.id} />
         ))}
       </div>
+      <div className="text-right p-3">
+        <Button />
+      </div>
     </>
   );
+
 };
 export default Gallary;
