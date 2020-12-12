@@ -4,14 +4,22 @@ import "./styles/main.css";
 import Navigation from "./components/Navigation";
 import Gallary from "./pages/Gallary";
 import React from "react";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Register from "./pages/Register";
+import Photo from "./components/Photo";
 
 function App() {
   return (
     <>
-      <Navigation fixed={true} />
-      <div className="pt-8 px-2">
-        <Gallary />
-      </div>
+      <Router>
+        <Navigation fixed={true} />
+        <div className="pt-16 px-2">
+          <Route path={'/gallary'} component={Gallary}/>
+          <Route path={'/register'} component={Register}/>
+          <Route path={'/aboutus'} component={() => <div>About us</div>}/>
+          <Route path={'/photo/:pid'} component={Photo}/>
+        </div>
+      </Router>
     </>
   );
 }
