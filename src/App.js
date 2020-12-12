@@ -3,6 +3,7 @@ import "./App.css";
 import "./styles/main.css";
 import Navigation from "./components/Navigation";
 import Gallary from "./pages/Gallary";
+import React from "react";
 
 function App() {
   return (
