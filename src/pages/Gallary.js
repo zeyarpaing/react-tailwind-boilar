@@ -8,8 +8,12 @@ const Gallary = () => {
   const [getImageData, setImageData] = useState([]);
   const [getLoading, setLoading] = useState(false);
 
+  const [changePage, page] = useState(1);
+
   function fetchImage() {
-    API.get(`/photos?page=2&per_page=30`)
+    setImageData([]);
+    console.log("Fetching image");
+    API.get(`/photos?page=` + changePage + `&per_page=30`)
       .then(function (res) {
         setLoading(false);
         setImageData(res.data);
@@ -17,8 +21,12 @@ const Gallary = () => {
       .catch((err) => console.error(err));
     setLoading(true);
   }
+  function increasePage(x) {
+    console.log("passed from button", x);
+    page(changePage + 1);
+  }
 
-  useEffect(fetchImage, []);
+  useEffect(fetchImage, [changePage]);
   return (
     <>
       <div className="grid place-items-center">
@@ -30,10 +38,9 @@ const Gallary = () => {
         ))}
       </div>
       <div className="text-right p-3">
-        <Button />
+        <Button doAfterOnClick={increasePage}>Next page</Button>
       </div>
     </>
   );
-
 };
 export default Gallary;
