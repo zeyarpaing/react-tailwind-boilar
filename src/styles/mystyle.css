@@ -20,6 +20,9 @@
   padding: 10px 15px;
 }
 
+.input-text:focus {
+  outline: none;
+}
 .lds-ring {
   display: inline-block;
   position: relative;

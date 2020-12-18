@@ -6,3 +6,6 @@ export const API = axios.create({
     Authorization: `Client-ID ${ACCESS_TOKEN}`,
   },
 });
+export const CovidAPI = axios.create({
+  baseURL: "https://disease.sh/"
+});

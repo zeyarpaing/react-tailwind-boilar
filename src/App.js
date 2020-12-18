@@ -7,6 +7,7 @@ import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Register from "./pages/Register";
 import Photo from "./components/Photo";
+import Covid19 from "./pages/Covid19";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path={'/register'} component={Register}/>
           <Route path={'/aboutus'} component={() => <div>About us</div>}/>
           <Route path={'/photo/:pid'} component={Photo}/>
+          <Route path={'/covid'} component={Covid19}/>
         </div>
       </Router>
     </>

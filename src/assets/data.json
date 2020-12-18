@@ -1,0 +1,19 @@
+{
+  "mainpage": {
+    "section": "mainpage",
+    "img": [
+      "assets/img1.jpg"
+    ],
+    "header": "blah blah",
+    "textContent": "Welcome to blah blah"
+  },
+  "category":{
+    "section": "category",
+    "img": [
+      "img1.jpg",
+      "img2.jpg"
+    ],
+    "header": "cat header",
+    "textContent": null
+  }
+}

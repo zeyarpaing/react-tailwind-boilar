@@ -1,12 +1,23 @@
-[
-    {
-        "catogory": "travel",
-        "data": [
-            {
-                "img": 'url',
-                "tite": "blah",
-                "textcontent": "s;dfk"
-            }
-        ]
-    }
-]
+[{
+  "updated": 1608040200345,
+  "cases": 73330307,
+  "todayCases": 127744,
+  "deaths": 1630944,
+  "todayDeaths": 3317,
+  "recovered": 51475558,
+  "todayRecovered": 157004,
+  "active": 20223805,
+  "critical": 106460,
+  "casesPerOneMillion": 9408,
+  "deathsPerOneMillion": 209.2,
+  "tests": 1112960140,
+  "testsPerOneMillion": 142802.72,
+  "population": 7793690262,
+  "oneCasePerPeople": 0,
+  "oneDeathPerPeople": 0,
+  "oneTestPerPeople": 0,
+  "activePerOneMillion": 2594.89,
+  "recoveredPerOneMillion": 6604.77,
+  "criticalPerOneMillion": 13.66,
+  "affectedCountries": 220
+}]

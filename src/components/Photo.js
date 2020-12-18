@@ -40,8 +40,6 @@ const Photo = ({match}) => {
         </div>) : ''}
     </>
     )
-
-
 }
 
 export  default Photo;
