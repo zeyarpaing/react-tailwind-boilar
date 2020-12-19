@@ -14,12 +14,15 @@ const Covid19 = () => {
     CovidAPI.get(url)
       .then(function(res) {
         setCasesData([res.data]);
+        console.log(res);
       })
       .catch((err) => console.error(err));
       axios.get("https://restcountries.eu/rest/v2/all?fields=name")
         .then(res => {
           console.log('fetched country data')
+
           setCountryData(res.data.map(country => country.name))
+          
         })
         .catch(e => console.error(e));
   }
@@ -57,9 +60,35 @@ const Covid19 = () => {
           <Loading /> :
           (
             <div>
-              <p>Today cases: </p>
-              <p>{casesData[0].todayCases}</p>
+               <div> 
+                <p>Today Tests: </p>
+                <p>{casesData[0].tests}</p>
+             </div>
+              <div>
+                <p>Today cases: </p>
+                <p>{casesData[0].todayCases}</p>
+              </div>
+              <div> 
+                <p>Today Recovered: </p>
+                <p>{casesData[0].todayRecovered}</p>
+             </div>
+             <div> 
+                <p>Total Recovered: </p>
+                <p>{casesData[0].recovered}</p>
+             </div>
+             <div> 
+                <p> Updated time: </p>
+                <p>{new Date(casesData[0].updated).toDateString()}</p>
+                <p>{new Date(casesData[0].updated).toLocaleTimeString()}</p>
+             </div>
+              <div> 
+                <p>Total cases: </p>
+                <p>{casesData[0].cases}</p>
+             </div>
+              <div><span>{country} </span><img src={casesData[0].countryInfo.flag}></img> </div>
+             
             </div>
+            
           )
       }
     </div>
