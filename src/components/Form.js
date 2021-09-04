@@ -28,7 +28,7 @@ const Form = ({ camera }) => {
   return (
     <div className="form-wrapper">
       <form className="form">
-        <header className="form-header">Become a photographer.</header>
+        <header className="form-header">Become a photographer now.</header>
         <label className="block mt-4 mb-2">Name</label>
 
         <input name="userName" className={`input-text ${formData.userName.err() ? 'border-red-500': ''}`} value={formData.userName.value} type="text" onChange={handleChange}/>
